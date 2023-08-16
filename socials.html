@@ -52,6 +52,10 @@
       background-color: #23c8c8;
     }
 
+    .whatsapp:hover {
+      background-color: #23c8c8;
+    }
+
     .facebook:hover {
       background-color: #4267B2;
     }
@@ -108,6 +112,18 @@
 
     <div class="wrapper">
 
+      <!-- Start email Icon -->
+      <div id="email" onclick="navigate(this.id)" class="social email">
+        <span class="icon email"><i class="fa-solid fa-envelope"></i></span>
+      </div>
+      <!-- End email Icon -->
+
+      <!-- Start whatsapp Icon -->
+      <div id="whatsapp" onclick="navigate(this.id)" class="social whatsapp">
+        <span class="icon whatsapp"><i class="fa-solid fa-whatsapp"></i></span>
+      </div>
+      <!-- End whatsapp Icon -->
+
       <!-- Start linkedin Icon -->
       <div id="linkedin" onclick="navigate(this.id)" class="social linkedin">
         <span class="icon"><i class="fab fa-linkedin"></i></span>
@@ -138,7 +154,12 @@
 
         if (id === "blog")
           window.open("https://blog.shorouk.dev", '_blank').focus(); //Add the url to your blog
-
+        else if (id === "email") {
+          window.open("mailto:eggodev@gmail.com", '_blank').focus(); //Add your email after "mailto:""
+        }
+        else if (id === "whatsapp") {
+          window.open("https://wa.me/595971868700", '_blank').focus();
+        }
         else if (id === "linkedin") {
           window.open("https://www.linkedin.com/in/gustavo-maciel-19a43634/", '_blank').focus(); //Add the url to your pinterest account
         }
@@ -146,7 +167,7 @@
           window.open("https://twitter.com/eggodev", '_blank').focus(); //Add the url to your pinterest account
         }
         else if (id === "github") {
-          window.open("https://web.telegram.org/", '_blank').focus(); //Add the url to your telegram account
+          window.open("https://github.com/eggodev", '_blank').focus(); //Add the url to your telegram account
         }
       }
 
